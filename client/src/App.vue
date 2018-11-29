@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Examples</router-link> |
-      <router-link to="/new-example">New Example</router-link> |
+      <router-link to="/">Shifts</router-link> |
+      <router-link to="/new-shift">New Shift</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>

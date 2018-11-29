@@ -1,5 +1,5 @@
 const router = require('express').Router(); // eslint-disable-line new-cap
-const noteRoutes = require('./examples');
-router.use('/examples', noteRoutes);
+const shiftRoutes = require('./shifts');
+router.use('/shifts', shiftRoutes);
 
 module.exports = router;

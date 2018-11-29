@@ -1,16 +1,16 @@
 <template>
   <div>
-    <example-form />
+    <shift-form />
   </div>
 </template>
 
 <script>
-import ExampleForm from '@/components/ExampleForm'
+import ShiftForm from '@/components/ShiftForm'
 
 export default {
-  name: 'NewExample',
+  name: 'NewShift',
   components: {
-    ExampleForm
+    ShiftForm
   }
 }
 </script>

@@ -21,9 +21,9 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
-      path: '/new-example',
-      name: 'new-example',
-      component: () => import(/* webpackChunkName: "example" */ './views/NewExample.vue')
+      path: '/new-shift',
+      name: 'new-shift',
+      component: () => import(/* webpackChunkName: "shift" */ './views/NewShift.vue')
     }
   ]
 })

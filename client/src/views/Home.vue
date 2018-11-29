@@ -1,17 +1,17 @@
 <template>
   <div>
-    <example-list />
+    <shift-list />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ExampleList from '@/components/ExampleList.vue'
+import ShiftList from '@/components/ShiftList.vue'
 
 export default {
   name: 'Home',
   components: {
-    ExampleList
+    ShiftList
   }
 }
 </script>
