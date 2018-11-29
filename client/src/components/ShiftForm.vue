@@ -3,31 +3,25 @@
     <div class="col-8 offset-2">
       <h2>New Shift</h2>
       <form class="clearfix mb-4" @submit.prevent="createShift">
-        <div class="form-group">
-          <label for="shift-name">Name</label>
-          <input v-model="name" type="text" id="shift-name" class="form-control" aria-describedby="shift-name" placeholder="Enter Name">
-        </div>
-        <div class="form-group">
-          <label for="shift-reason">Reason</label>
-          <input v-model="reason" type="text" id="shift-reason" class="form-control" aria-describedby="shift-reason" placeholder="Enter Reason">
-        </div>
-        <div class="form-group">
-          <label for="shift-date">Shift Date</label>
-          <input v-model="date" type="date" id="shift-date" class="form-control" aria-describedby="shift-date" placeholder="12/12/2000">
-        </div>
-        <div class="form-group">
-          <label for="shift-duration">Shift Duration</label>
-          <input v-model="duration" type="number" id="shift-duration" class="form-control" aria-describedby="shift-duration" placeholder="Enter Duration">
-        </div>
-        <div class="form-group">
-          <label for="shift-role">Shift Role</label>
-          <input v-model="role" type="text" id="shift-role" class="form-control" aria-describedby="shift-role" placeholder="Enter Role">
-        </div>
-        <div class="form-group">
-          <label for="shift-priority">Shift Priority</label>
-          <input v-model="priority" type="text" id="shift-priority" class="form-control" aria-describedby="shift-priority" placeholder="Enter Priority">
-        </div>
-        <button id="submit" class="btn btn-primary float-right">Submit</button>
+        <b-form-group label="Name">
+          <b-form-input v-model="name" type="text" id="shift-name" aria-describedby="shift-name" placeholder="Enter Name"></b-form-input>
+        </b-form-group>
+        <b-form-group label="Reason">
+          <b-form-input v-model="reason" type="text" id="shift-reason" aria-describedby="shift-reason" placeholder="Enter Reason"></b-form-input>
+        </b-form-group>
+        <b-form-group label="Shift Date">
+          <b-form-input v-model="date" type="date" id="shift-date" aria-describedby="shift-date" placeholder="12/12/2000"></b-form-input>
+        </b-form-group>
+        <b-form-group label="Shift Duration">
+          <b-form-input v-model="duration" type="number" id="shift-duration" aria-describedby="shift-duration" placeholder="Enter Duration"></b-form-input>
+        </b-form-group>
+        <b-form-group label="Shift Role">
+          <b-form-input v-model="role" type="text" id="shift-role" aria-describedby="shift-role" placeholder="Enter Role"></b-form-input>
+        </b-form-group>
+        <b-form-group label="Shift Priority">
+          <b-form-input v-model="priority" type="text" id="shift-priority" aria-describedby="shift-priority" placeholder="Enter Priority"></b-form-input>
+        </b-form-group>
+        <b-btn id="submit" class="btn btn-primary float-right">Submit</b-btn>
       </form>
     </div>
   </div>
