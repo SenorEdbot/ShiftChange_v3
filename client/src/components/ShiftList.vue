@@ -15,7 +15,7 @@
           <button @click="deleteShift(shift.id)" class="btn btn-danger float-right delete">x</button>
         </li>
       </ul> -->
-      <table>
+      <table class="table table-striped">
           <thead>
             <tr>
               <th>ID</th>
@@ -44,13 +44,13 @@
               <td>{{ shift.priority }}</td>
               <td>{{ shift.personResponsible }}</td>
               <td>
-                <button>Claim</button>
+                <b-btn>Claim</b-btn>
               </td>
               <td>
-                <button>Edit</button>
+                <b-btn>Edit</b-btn>
               </td>
               <td>
-                <button @click="deleteShift(shift.id)" class="btn btn-danger float-right delete">x</button>
+                <b-btn @click="deleteShift(shift.id)" class="btn btn-danger float-right delete">x</b-btn>
               </td>
             </tr>
           </tbody>
