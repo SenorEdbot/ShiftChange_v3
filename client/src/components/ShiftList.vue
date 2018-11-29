@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-8 offset-2">
       <h3>Shifts:</h3>
-      <ul id="shift-list" class="list-group">
+      <!-- <ul id="shift-list" class="list-group">
         <li v-for="shift in shifts" :key="shift.id">
           {{shift.name}} | 
           {{shift.reason}} |
@@ -14,7 +14,47 @@
           {{shift.personResponsible}}
           <button @click="deleteShift(shift.id)" class="btn btn-danger float-right delete">x</button>
         </li>
-      </ul>
+      </ul> -->
+      <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Reason</th>
+              <th>Date</th>
+              <th>Duration</th>
+              <th>Role</th>
+              <th>Covered</th>
+              <th>Priority</th>
+              <th>Person Responsible</th>
+              <th>Claim</th>
+              <th>Eddie</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="shift in shifts" :key="shift.id">
+              <td>{{ shift.id }}</td>
+              <td>{{ shift.name }}</td>
+              <td>{{ shift.reason }}</td>
+              <td>{{ shift.date }}</td>
+              <td>{{ shift.duration }}</td>
+              <td>{{ shift.role }}</td>
+              <td>{{ shift.covered }}</td>
+              <td>{{ shift.priority }}</td>
+              <td>{{ shift.personResponsible }}</td>
+              <td>
+                <button>Claim</button>
+              </td>
+              <td>
+                <button>Edit</button>
+              </td>
+              <td>
+                <button @click="deleteShift(shift.id)" class="btn btn-danger float-right delete">x</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
     </div>
   </div>
 </template>
