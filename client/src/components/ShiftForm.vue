@@ -18,8 +18,12 @@
         <b-form-group label="Shift Role">
           <b-form-input v-model="role" type="text" id="shift-role" aria-describedby="shift-role" placeholder="Enter Role"></b-form-input>
         </b-form-group>
-        <b-form-group label="Shift Priority">
-          <b-form-input v-model="priority" type="text" id="shift-priority" aria-describedby="shift-priority" placeholder="Enter Priority"></b-form-input>
+        <b-form-group label="Priority">
+          <b-form-radio-group id="radioPriority" v-model="priority" name="priority" stacked>
+            <b-form-radio value="low">Low</b-form-radio>
+            <b-form-radio value="high">High</b-form-radio>
+            <b-form-radio value="urgent">Urgent</b-form-radio>
+          </b-form-radio-group>
         </b-form-group>
         <b-btn id="submit" class="btn btn-primary float-right">Submit</b-btn>
       </form>
