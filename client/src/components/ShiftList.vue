@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-8 offset-2">
-      <h3>Shifts:</h3>
+      <h3>Current Shifts:</h3>
       <!-- <ul id="shift-list" class="list-group">
         <li v-for="shift in shifts" :key="shift.id">
           {{shift.name}} | 
@@ -15,7 +15,7 @@
           <button @click="deleteShift(shift.id)" class="btn btn-danger float-right delete">x</button>
         </li>
       </ul> -->
-      <table class="table table-striped">
+      <table class="table table-responsive">
           <thead>
             <tr>
               <th>ID</th>
@@ -28,7 +28,7 @@
               <th>Priority</th>
               <th>Person Responsible</th>
               <th>Claim</th>
-              <th>Eddie</th>
+              <th>Edit</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -50,7 +50,7 @@
                 <b-btn>Edit</b-btn>
               </td>
               <td>
-                <b-btn @click="deleteShift(shift.id)" class="btn btn-danger float-right delete">x</b-btn>
+                <b-btn @click="deleteShift(shift.id)" class="btn btn-success float-right delete">x</b-btn>
               </td>
             </tr>
           </tbody>
@@ -86,5 +86,15 @@ export default {
 </script>
 
 <style scoped>
-
+h3{
+  color: #42b983;;
+}
+th {
+  font-size: 18px;
+}
+tbody {
+  background-image: linear-gradient(rgb(207, 252, 201), #42b983);
+  box-shadow: 0 0 40px black;
+  
+}
 </style>
