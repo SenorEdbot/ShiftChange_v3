@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/">Shifts</router-link> |
       <router-link to="/new-shift">New Shift</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/create-employee">Create Employee</router-link>
     </div>
     <router-view/>
   </div>

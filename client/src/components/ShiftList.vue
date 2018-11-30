@@ -28,7 +28,7 @@
               <th>Priority</th>
               <th>Person Responsible</th>
               <th>Claim</th>
-              <th>Eddie</th>
+              <th>Edit</th>
               <th>Delete</th>
             </tr>
           </thead>
