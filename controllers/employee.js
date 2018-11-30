@@ -14,7 +14,7 @@ module.exports = {
   create: (req, res) => {
     db.Employees.create(req.body).then((results) => {
       res.json(results);
-    }).catch((err) =>{
+    }).catch((e) =>{
         res.status(400).send({
             error: 'This email is already in use.'
         })
