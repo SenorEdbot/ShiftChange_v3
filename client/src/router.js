@@ -24,6 +24,11 @@ export default new Router({
       path: '/new-shift',
       name: 'new-shift',
       component: () => import(/* webpackChunkName: "shift" */ './views/NewShift.vue')
+    },
+    {
+      path: '/create-employee',
+      name: 'create-employee',
+      component: () => import(/* webpackChunkName: "shift" */ './views/NewEmployee.vue')
     }
   ]
 })
