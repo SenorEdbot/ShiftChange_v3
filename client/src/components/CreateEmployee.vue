@@ -12,7 +12,7 @@
             name="password"
             v-model="password"
             placeholder="password" />
-        <div class="error" v-html="error" />
+        <div v-html="error" class="error" />
         <b-btn @click="register">Register</b-btn>
     </div>
 </template>
@@ -29,15 +29,14 @@
         },
         methods: {
             async register() {
-                try{
-                    await AuthenticationService.create({
-                        email: this.email,
-                        password: this.password
-                    })
-                } catch (error){
+                try {
+                await AuthenticationService.create({
+                    email: this.email,
+                    password: this.password
+                })
+                } catch (error) {
                     this.error = error.response.data.error
                 }
-                console.log('register button was clicked', this.email, this.password)
             }
         }
     }
