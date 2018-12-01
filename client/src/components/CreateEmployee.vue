@@ -1,19 +1,23 @@
 <template>
     <div>
         <h1>Register</h1>
-
-        <input 
-            type="email"
-            name="email"
-            v-model="email"
-            placeholder="email" />
-        <input 
-            type="password"
-            name="password"
-            v-model="password"
-            placeholder="password" />
-        <div v-html="error" class="error" />
-        <b-btn @click="register">Register</b-btn>
+        <form
+            name="create-employee-form"
+            autocomplete="off">
+            <input 
+                type="email"
+                name="email"
+                autocomplete="new-password"
+                v-model="email"
+                placeholder="email" />
+            <input 
+                type="password"
+                name="password"
+                v-model="password"
+                placeholder="password" />
+            <div v-html="error" class="error" />
+        </form>
+            <b-btn @click="register">Register</b-btn>
     </div>
 </template>
 

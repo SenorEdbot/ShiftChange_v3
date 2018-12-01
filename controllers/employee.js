@@ -14,14 +14,21 @@ module.exports = {
       msg: `Find One: ${req.params.id}`,
     });
   },
-  create: (req, res) => {
-    db.Employees.create(req.body).then((results) => {
-      res.json(results);
-    }).catch((e) =>{
-        res.status(400).send({
-            error: 'This email is already in use.'
+  async create (req, res) {
+    try {
+      const user = await db.Employees.create(req.body)
+      const userJson = user.toJSON()
+      res.send({
+        user: userJson,
+        token: jwt.sign(userJson, config.authentication.jwtSecret, {
+          expiresIn: ONE_WEEK
         })
-    });
+      })
+    } catch(err) {
+      res.status(400).send({
+        error: 'This email is already in use.'
+      })
+    }
   },
   async login (req, res) {
     try {
@@ -38,13 +45,11 @@ module.exports = {
         })
       }
       const isPasswordValid = await user.comparePassword(password)
-      console.log(isPasswordValid)
       if (!isPasswordValid) {
         return res.status(403).send({
           error: 'This login information was incorrect 2'
         })
       }
-      console.log('passwords matched')
       const userJson = user.toJSON()
       res.send({
         user: userJson,
@@ -54,7 +59,7 @@ module.exports = {
       })
     } catch(error) {
       res.status(500).send({
-        error: 'An error has occured trying to login'
+        error: 'An error has occured trying to login ' + error
       })
     }
   },
