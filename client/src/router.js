@@ -28,7 +28,12 @@ export default new Router({
     {
       path: '/create-employee',
       name: 'create-employee',
-      component: () => import(/* webpackChunkName: "shift" */ './views/NewEmployee.vue')
+      component: () => import(/* webpackChunkName: "shift" */ './components/CreateEmployee.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import(/* webpackChunkName: "shift" */ './components/Login.vue')
     }
   ]
 })
