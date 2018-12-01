@@ -1,4 +1,7 @@
 const db = require('../models');
+const jwt = require('jsonwebtoken')
+const config = require('../config/config.js')
+const ONE_WEEK = 60 * 60 * 24 * 7
 
 module.exports = {
   findAll: (req, res) => {
@@ -41,10 +44,13 @@ module.exports = {
           error: 'This login information was incorrect 2'
         })
       }
-      
+      console.log('passwords matched')
       const userJson = user.toJSON()
       res.send({
-        user: userJson
+        user: userJson,
+        token: jwt.sign(userJson, config.authentication.jwtSecret, {
+          expiresIn: ONE_WEEK
+        })
       })
     } catch(error) {
       res.status(500).send({
