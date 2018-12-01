@@ -79,7 +79,7 @@ form {
   border-radius: 10px;
   margin-bottom: 25px;
   padding: 30px;
-  background-image: radial-gradient(rgb(207, 252, 201), #42b983)
+  background-image: radial-gradient(rgb(207, 252, 201), #42b983);
 }
 #shift-name {
   margin-left: 25%;
