@@ -3,7 +3,7 @@
     <div class="col-8 offset-2">
       <h3>Current Shifts:</h3>
 
-      <accordion class="shiftbtns" :panes="panes"/>
+<accordion :panes="panes"/>
     </div>
   </div>
 </div>
@@ -82,7 +82,7 @@ export default {
   components: {
     Accordion,
   }
-}
+};
 </script>
 
 <style>
