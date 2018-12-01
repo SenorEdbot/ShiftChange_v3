@@ -6,7 +6,6 @@
 <accordion :panes="panes"/>
     </div>
   </div>
-</div>
 </template>
 
 <script>
