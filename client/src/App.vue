@@ -8,6 +8,10 @@
       <router-link to="/create-employee">Create Employee</router-link>
     </div>
     <router-view/>
+    <div id="nav">
+      <div>Powered by</div>
+      <router-link to="/"><img id="logo" src="./assets/shift-change-logo-only.png"></router-link>
+    </div>
   </div>
   </body>
 </template>
@@ -21,6 +25,10 @@
   color: #2c3e50;
   /* background-image: linear-gradient(rgb(248, 241, 241), rgb(146, 143, 143)); */
   
+}
+
+#logo {
+  height: 60px;
 }
 #nav {
   padding: 30px;

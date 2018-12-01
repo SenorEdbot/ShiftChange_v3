@@ -24,7 +24,6 @@
       >
       <shift-form />
       </b-carousel-slide>
-      
       <b-carousel-slide caption="First slide"
                         text="Nulla vitae elit libero, a pharetra augue mollis interdum."
                         img-src="https://picsum.photos/1024/480/?image=52"
@@ -40,7 +39,6 @@
       </b-carousel-slide>
 
     </b-carousel>
-
     <shift-list />
   </div>
 </template>
@@ -59,14 +57,14 @@ export default {
   components: {
     ShiftList
   },
-  name: 'NewShift',
-  components: {
-    ShiftForm
-  },
-  name: 'NewEmployee',
-  components: {
-    CreateEmployee
-  },
+  // name: 'NewShift',
+  // components: {
+  //   ShiftForm
+  // },
+  // name: 'NewEmployee',
+  // components: {
+  //   CreateEmployee
+  // },
   data () {
     return {
       slide: 0,
