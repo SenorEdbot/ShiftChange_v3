@@ -2,7 +2,9 @@ module.exports = function(sequelize, DataTypes) {
   const Shifts = sequelize.define('Shifts', {
     name: DataTypes.STRING,
     reason: DataTypes.STRING,
-    date: DataTypes.DATE,
+    date: DataTypes.DATEONLY,
+    shiftStart: DataTypes.TIME,
+    shiftEnd: DataTypes.TIME,
     duration: DataTypes.DECIMAL,
     role: DataTypes.STRING,
     covered: DataTypes.BOOLEAN,
