@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Register</h1>
+        <h1>Login</h1>
 
         <input 
             type="email"
@@ -13,7 +13,7 @@
             v-model="password"
             placeholder="password" />
         <div v-html="error" class="error" />
-        <b-btn @click="register">Register</b-btn>
+        <b-btn @click="login">Login</b-btn>
     </div>
 </template>
 
@@ -28,9 +28,9 @@
             }
         },
         methods: {
-            async register() {
+            async login() {
                 try {
-                    await AuthenticationService.create({
+                    await AuthenticationService.login({
                         email: this.email,
                         password: this.password
                     })
