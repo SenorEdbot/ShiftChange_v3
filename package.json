@@ -27,6 +27,7 @@
     "if-env": "^1.0.4",
     "joi": "^14.3.0",
     "jsonwebtoken": "^8.4.0",
+    "mdbvue": "^4.8.2",
     "mysql2": "^1.6.4",
     "sequelize": "^4.41.2"
   },
