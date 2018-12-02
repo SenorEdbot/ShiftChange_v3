@@ -6079,7 +6079,11 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
+<<<<<<< HEAD
 mdbvue@4.8.2:
+=======
+mdbvue@^4.8.2:
+>>>>>>> carousel
   version "4.8.2"
   resolved "https://registry.yarnpkg.com/mdbvue/-/mdbvue-4.8.2.tgz#a14701dc605d5c5aa05bdd57a5c2298115533d54"
   integrity sha512-Qes5xCY3FLG6lwnPnarNurgeinKMscbQMeEto/VSkrZk8DrxbILTxaR1wxMtSGsV2E1B860yI4BcBmjezgMEBA==
