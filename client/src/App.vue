@@ -11,11 +11,32 @@
       <router-link 
       v-if="!$store.state.isUserLoggedIn"
       to="/login"> Login</router-link>
+      <a 
+      v-if="$store.state.isUserLoggedIn"
+      @click="logout"
+      to="/login"> Logout</a>
     </div>
     <router-view/>
   </div>
   </body>
 </template>
+
+<script>
+export default {
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
+    }
+    , logout () {
+      this.$store.dispatch('setToken', null)
+      this.$store.dispatch('setUser', null)
+      this.$router.push({
+        name: 'home'
+      })
+    }
+  }
+}
+</script>
 
 <style>
 #app {
