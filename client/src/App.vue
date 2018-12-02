@@ -2,19 +2,22 @@
 <body>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Shifts</router-link> |
-      <router-link to="/new-shift">New Shift</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link 
-      v-if="!$store.state.isUserLoggedIn"
-      to="/create-employee">Create Employee |</router-link>
-      <router-link 
-      v-if="!$store.state.isUserLoggedIn"
-      to="/login"> Login</router-link>
+      <a
+      @click="navigateTo({name: 'home'})">Shifts | </a>
+      <a
+      @click="navigateTo({name: 'newShift'})">New Shift | </a>
+      <a
+      @click="navigateTo({name: 'about'})">About | </a>
+      <a
+        v-if="!$store.state.isUserLoggedIn"
+        @click="navigateTo({name:'createEmployee'})">Create Employee | </a>
+      <a
+        v-if="!$store.state.isUserLoggedIn"
+        @click="navigateTo({name:'login'})">Login</a>
       <a 
       v-if="$store.state.isUserLoggedIn"
       @click="logout"
-      to="/login"> Logout</a>
+      to="/login">Logout</a>
     </div>
     <router-view/>
   </div>
