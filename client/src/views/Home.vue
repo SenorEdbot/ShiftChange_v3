@@ -4,15 +4,18 @@
       <mdb-carousel-item alt="First slide">
         <shift-list />
       </mdb-carousel-item>
-      <mdb-carousel-item alt="Second slide">
+      <!-- <mdb-carousel-item alt="Second slide">
         <create-employee />
-      </mdb-carousel-item>
+      </mdb-carousel-item> -->
       <mdb-carousel-item class="about" alt="Third slide">
         <h1>This is an about page</h1>
       </mdb-carousel-item>
       <mdb-carousel-item alt="Fourth slide">
         <shift-form />
       </mdb-carousel-item>
+      <!-- <mdb-carousel-item alt="Fifth slide">
+        <login />
+      </mdb-carousel-item> -->
     </mdb-carousel>
   </div>
 </template>
@@ -22,25 +25,27 @@
 // @ is an alias to /src
 import ShiftList from '@/components/ShiftList.vue'
 
-import CreateEmployee from '@/components/CreateEmployee'
+// import CreateEmployee from '@/components/CreateEmployee'
 
 import ShiftForm from '@/components/ShiftForm'
 
+// import Login from '@/components/Login'
+
 // import components from '@/components'
 
-import { mdbCarousel, mdbCarouselItem, mdbCarouselCaption } from 'mdbvue'
+import { mdbCarousel, mdbCarouselItem } from 'mdbvue'
 
 export default {
   name: 'CarouselPage',
   components: {
     // components,
     ShiftList,
-    CreateEmployee,
+    // CreateEmployee,
+    // Login,
     ShiftForm,
     mdbCarousel,
-    mdbCarouselItem,
-    mdbCarouselCaption
-  },
-};
+    mdbCarouselItem
+  }
+}
 
 </script>
