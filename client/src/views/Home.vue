@@ -5,7 +5,11 @@
         <shift-list />
       </mdb-carousel-item>
       <mdb-carousel-item alt="Second slide">
+        <br><br>
         <create-employee />
+        <br><br>
+        <login />
+        <br><br>
       </mdb-carousel-item>
       <mdb-carousel-item img src="./assets/shift-change-transparent.png" class="about" alt="Third slide">
         <img src="../assets/shift-change-transparent.png">
@@ -13,9 +17,6 @@
       </mdb-carousel-item>
       <mdb-carousel-item alt="Fourth slide">
         <shift-form />
-      </mdb-carousel-item>
-      <mdb-carousel-item alt="Fifth slide">
-        <login />
       </mdb-carousel-item>
     </mdb-carousel>
   </div>
