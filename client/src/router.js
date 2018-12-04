@@ -13,6 +13,11 @@ export default new Router({
       component: Home
     },
     {
+      path: '/shifts',
+      name: 'shifts',
+      component: () => import( './components/ShiftList.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
@@ -32,7 +37,7 @@ export default new Router({
     },
     {
       path: '/login',
-      name: 'login',
+      name: 'Login',
       component: () => import(/* webpackChunkName: "shift" */ './components/Login.vue')
     }
   ]

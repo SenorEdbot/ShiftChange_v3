@@ -2,13 +2,13 @@
 <body>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Shifts</router-link> |
+      <router-link to="/shifts">Shifts</router-link> |
       <router-link to="/new-shift">New Shift</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link 
+      <router-link
       v-if="!$store.state.isUserLoggedIn"
       to="/create-employee">Create Employee |</router-link>
-      <router-link 
+      <router-link
       v-if="!$store.state.isUserLoggedIn"
       to="/login"> Login</router-link>
       <a 
@@ -17,6 +17,10 @@
       to="/login"> Logout</a>
     </div>
     <router-view/>
+    <div id="nav">
+      Powered By
+      <router-link to="/"><img id="logo" src="./assets/shift-change-logo-only.png"></router-link>
+    </div>
   </div>
   </body>
 </template>
@@ -63,6 +67,10 @@ export default {
 body {
 background-image: radial-gradient(rgb(248, 241, 241), rgb(146, 143, 143));
 height: 100vh;  
+}
+
+#logo {
+  width: 60px;
 }
 
 </style>
