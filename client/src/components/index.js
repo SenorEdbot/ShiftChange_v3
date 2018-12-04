@@ -1,7 +1,7 @@
-import ShiftList from './ShiftList'
+import Login from './Login'
 import CreateEmployee from './CreateEmployee'
 import ShiftForm from './ShiftForm'
 
 export default {
-  ShiftList, CreateEmployee, ShiftForm
+  Login, CreateEmployee, ShiftForm
 }

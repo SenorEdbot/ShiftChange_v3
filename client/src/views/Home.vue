@@ -1,21 +1,22 @@
 <template>
   <div>
-    <mdb-carousel :interval="0" showControls>
+    <mdb-carousel :interval="0" showControls top>
       <mdb-carousel-item alt="First slide">
         <shift-list />
       </mdb-carousel-item>
-      <!-- <mdb-carousel-item alt="Second slide">
+      <mdb-carousel-item alt="Second slide">
         <create-employee />
-      </mdb-carousel-item> -->
-      <mdb-carousel-item class="about" alt="Third slide">
+      </mdb-carousel-item>
+      <mdb-carousel-item img src="./assets/shift-change-transparent.png" class="about" alt="Third slide">
+        <img src="../assets/shift-change-transparent.png">
         <h1>This is an about page</h1>
       </mdb-carousel-item>
       <mdb-carousel-item alt="Fourth slide">
         <shift-form />
       </mdb-carousel-item>
-      <!-- <mdb-carousel-item alt="Fifth slide">
+      <mdb-carousel-item alt="Fifth slide">
         <login />
-      </mdb-carousel-item> -->
+      </mdb-carousel-item>
     </mdb-carousel>
   </div>
 </template>
@@ -25,11 +26,11 @@
 // @ is an alias to /src
 import ShiftList from '@/components/ShiftList.vue'
 
-// import CreateEmployee from '@/components/CreateEmployee'
+import CreateEmployee from '@/components/CreateEmployee'
 
 import ShiftForm from '@/components/ShiftForm'
 
-// import Login from '@/components/Login'
+import Login from '@/components/Login'
 
 // import components from '@/components'
 
@@ -40,8 +41,8 @@ export default {
   components: {
     // components,
     ShiftList,
-    // CreateEmployee,
-    // Login,
+    CreateEmployee,
+    Login,
     ShiftForm,
     mdbCarousel,
     mdbCarouselItem

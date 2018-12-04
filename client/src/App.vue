@@ -5,10 +5,10 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/new-shift">New Shift</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link 
+      <router-link
       v-if="!$store.state.isUserLoggedIn"
       to="/create-employee">Create Employee |</router-link>
-      <router-link 
+      <router-link
       v-if="!$store.state.isUserLoggedIn"
       to="/login"> Login</router-link>
     </div>
@@ -29,7 +29,7 @@
   text-align: center;
   color: #2c3e50;
   /* background-image: linear-gradient(rgb(248, 241, 241), rgb(146, 143, 143)); */
-  
+
 }
 
 #logo {
@@ -53,7 +53,7 @@
 }
 body {
 background-image: radial-gradient(rgb(248, 241, 241), rgb(146, 143, 143));
-height: 100vh;  
+height: 100vh;
 }
 
 </style>
